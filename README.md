@@ -67,7 +67,10 @@ Truck truck1 = new Truck();
 truck1.info(); // This will output "This is a truck."
 ```
 
-When overriding occurs in our code it's important to reflect it in your code.
+When overriding occurs in our code it's important to reflect it using the proper annotation. 
+* Use the `@Overriding` annotation above all methods that will override a method from the super-class.
+* Use the `this` keyword to differentiate attributes from the sub-class.
+* Use the `super` keyword to differentiate attributes from the super-class.
 
 **For Example:**
 ```java
