@@ -33,7 +33,7 @@ class Car {
 
 // Sub/Child Class
 class Truck extends Car {
-	public String model; // Same name as Car attribute
+	private String model; // Same name as Car attribute
 	public int weight_limit;
 
 	// Same name as Car methods.
