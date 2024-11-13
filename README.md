@@ -18,7 +18,7 @@ When a class has access to multiple members with the same name (identifier), thi
 ```java
 // Super/Parent Class
 class Car {
-	private String model;
+	public String model;
 
 	public void info() {
 		System.out.print("This is a car.");
@@ -30,7 +30,7 @@ class Car {
 
 // Sub/Child Class
 class Truck extends Car {
-	private String model; // Same name as Car attribute
+	public String model; // Same name as Car attribute
 	public int weight_limit;
 
 	// Same name as Car methods.
@@ -71,7 +71,7 @@ When overriding occurs in our code it's important to reflect it using the proper
 ```java
 // Super/Parent Class
 class Car {
-	private String model;
+	public String model;
 
 	public void info() {
 		System.out.print("This is a car.");
@@ -83,7 +83,7 @@ class Car {
 
 // Sub/Child Class
 class Truck extends Car {
-	private String model; // Same name as Car attribute
+	public String model; // Same name as Car attribute
 	public int weight_limit;
 
 	// Same name as Car methods.
