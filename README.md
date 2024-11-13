@@ -23,11 +23,8 @@ class Car {
 	public void info() {
 		System.out.print("This is a car.");
 	}
-	public void set_model(String m) {
-		model = m;
-	}
-	public String get_model() {
-		return model;
+	public void attributes() {
+		System.out.print(model);
 	}
 }
 
@@ -40,11 +37,9 @@ class Truck extends Car {
 	public void info() {
 		System.out.print("This is a truck.");
 	}
-	public void set_model(String m) {
-		model = m;
-	}
-	public String get_model() {
-		return model;
+	public void attributes() {
+		System.out.print(model);
+		System.out.print(weight_limit);
 	}
 }
 ```
@@ -81,11 +76,8 @@ class Car {
 	public void info() {
 		System.out.print("This is a car.");
 	}
-	public void set_model(String m) {
-		model = m;
-	}
-	public String get_model() {
-		return model;
+	public void attributes() {
+		System.out.print(model);
 	}
 }
 
@@ -100,12 +92,10 @@ class Truck extends Car {
 		System.out.print("This is a truck.");
 	}
 	@Override
-	public void set_model(String m) {
-		this.model = m;
-	}
-	@Override
-	public String get_model() {
-		return this.model;
+	public void attributes() {
+		System.out.print(super.model);
+		System.out.print(this.model);
+		System.out.print(this.weight_limit);
 	}
 }
 ```
@@ -118,7 +108,9 @@ For this assignment you will be working with the following classes: `Machine`, `
 
 `Bulldozer`'s and `Excavator`'s are both `Machine`s, so have them **inherit** the `Machine` class.
 
-Next, **override** the `about()` method so when called upon it will output the information of the **Sub-Class**.
+Next, create constructors for `Bulldozer` and `Excavator`. Remeber, use the `this` and `super` keywords.
+
+Lastly, **override** the `about()` method so when called upon it will output the information of the **Sub-Class**. Use the correct annotation to indicate when you are overriding a method.
 
 **Test Your Code:**
 
