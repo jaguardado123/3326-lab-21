@@ -1,4 +1,4 @@
-# Lab Assignment 20
+# Lab Assignment 21
 
 In this lab you will practice working with polymorphism.
 
@@ -16,24 +16,38 @@ When a class has access to multiple members with the same name (identifier), thi
 
 **For Example:**
 ```java
-// Super-Class
+// Super/Parent Class
 class Car {
-	public String model;
+	private String model;
 
 	public void info() {
 		System.out.print("This is a car.");
 	}
+	public void set_model(String m) {
+		model = m;
+	}
+	public String get_model() {
+		return model;
+	}
 }
 
-// Sub-Class
+// Sub/Child Class
 class Truck extends Car {
+	public String model; // Same name as Car attribute
 	public int weight_limit;
 
+	// Same name as Car methods.
 	public void info() {
 		System.out.print("This is a truck.");
 	}
+	public void set_model(String m) {
+		model = m;
+	}
+	public String get_model() {
+		return model;
+	}
 }
-``` 
+```
 
 To learn more about polymorphism in Java visit: https://www.w3schools.com/java/java_polymorphism.asp
 
@@ -42,7 +56,7 @@ To learn more about polymorphism in Java visit: https://www.w3schools.com/java/j
 
 When a member from the **Super-Class** is inherited into the **Sub-Class** the **Sub-Class**' members takes precedence, this is known as **overriding**.
 
-Overriding only occurs in the following scenarious:
+Overriding only occurs in the following scenarios:
 
 * Attributes have the same identifier.
 * Methods have the same identifier & parameters.
@@ -51,6 +65,46 @@ Overriding only occurs in the following scenarious:
 ```java
 Truck truck1 = new Truck();
 truck1.info(); // This will output "This is a truck."
+```
+
+When overriding occurs in our code it's important to reflect it in your code.
+
+**For Example:**
+```java
+// Super/Parent Class
+class Car {
+	private String model;
+
+	public void info() {
+		System.out.print("This is a car.");
+	}
+	public void set_model(String m) {
+		model = m;
+	}
+	public String get_model() {
+		return model;
+	}
+}
+
+// Sub/Child Class
+class Truck extends Car {
+	private String model; // Same name as Car attribute
+	public int weight_limit;
+
+	// Same name as Car methods.
+	@Override
+	public void info() {
+		System.out.print("This is a truck.");
+	}
+	@Override
+	public void set_model(String m) {
+		this.model = m;
+	}
+	@Override
+	public String get_model() {
+		return this.model;
+	}
+}
 ```
 
 To learn more about overriding in Java visit: https://www.geeksforgeeks.org/overriding-in-java/
