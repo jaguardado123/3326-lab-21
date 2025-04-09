@@ -12,7 +12,7 @@ Now let's begin!
 
 When inheriting attributes and methods from other classes it's inevitable to run into a situation where an member with the same name is inherited.
 
-When a class has access to multiple members with the same name (identifier), this is known as **polymorphism**.
+When a class has access to multiple members with the same name (identifier), this is known as **Polymorphism**.
 
 **For Example:**
 ```java
@@ -49,12 +49,11 @@ To learn more about polymorphism in Java visit: https://www.w3schools.com/java/j
 
 ### Overriding
 
-When a member from the **Super-Class** is inherited into the **Sub-Class** the **Sub-Class**' members takes precedence, this is known as **overriding**.
+When a method from the **Super-Class** is inherited into the **Sub-Class** that has a method with the exact same name and parameters, the **Sub-Class**' method takes precedence, this is known as **overriding**.
 
-Overriding only occurs in the following scenarios:
+Overriding only occurs in the following scenario:
 
-* Attributes have the same identifier.
-* Methods have the same identifier & parameters.
+* **Methods** have the same identifier & parameters.
 
 **For Example:**
 ```java
@@ -83,7 +82,7 @@ class Car {
 
 // Sub/Child Class
 class Truck extends Car {
-	public String model; // Same name as Car attribute
+	public String model; // Same name as Car attribute. NOT Overriding.
 	public int weight_limit;
 
 	// Same name as Car methods.
@@ -115,10 +114,11 @@ Lastly, **override** the `about()` method so when called upon it will output the
 **Test Your Code:**
 
 ```
-./build.sh
 ./test.sh
 ```
 
 ## Submit your assignment
 
-To submit your lab assignment click on the **Source Control** icon (3 circles with 2 lines) on your leftside navbar. Next, click on the **+** symbol next to **Changes** to stage your changes. Lastly, add a commit message (ex: "First commit") and click **Commit** then **Sync Changes**. And you're done!
+[Grading Criteria](https://joselitoguardado.dev/3326/labs/Lab_21.pdf)
+
+[How to Submit Assignments to GitHub](https://joselitoguardado.dev/3326/How_to_Submit_Assignments_to_GitHub.pdf)
