@@ -1,4 +1,4 @@
-# Lab 22
+# Lab 21
 
 In this lab you will practice working with **polymorphism**.
 
