@@ -1,6 +1,6 @@
-# Lab Assignment 22
+# Lab 22
 
-In this lab you will practice working with polymorphism.
+In this lab you will practice working with **polymorphism**.
 
 Unlike previous labs, your class has already been created for you. 
 
@@ -10,9 +10,9 @@ Now let's begin!
 
 ### Polymorphism
 
-When a class is inheriting members from another class it's inevitable to run into a situation where we end up with duplicate members that have the same name.
+**Polymorphism** is the ability to present the same interface for differing underlying forms.
 
-When a class has access to multiple members with the same identifiers or signatures, this is known as **Polymorphism**.
+Polymorphism typically refers to the behavior aspect of an instance (object). The two main cases of Polymorphism are **Overload** and **Override**. These cases happen when you have methods with the same name but they behave differently based on how and when they're called.
 
 **For Example:**
 ```java
@@ -23,25 +23,20 @@ class Car {
 	public void info() {
 		System.out.print("This is a car.");
 	}
-
-	public void attributes() {
-		System.out.print(model);
-	}
 }
 
 // Sub/Child Class
 class Truck extends Car {
-	public String model; // Same name as Car attribute
 	public int weight_limit;
 
-	// Same name as Car methods.
+	// Same name as Car method.
 	public void info() {
 		System.out.print("This is a truck.");
 	}
 
-	public void attributes() {
-		System.out.print(model);
-		System.out.print(weight_limit);
+	// Same name as Car and Truck method.
+	public void info(int w) {
+		this.weight_limit = w;
 	}
 }
 ```
@@ -77,26 +72,16 @@ class Car {
 	public void info() {
 		System.out.print("This is a car.");
 	}
-	public void attributes() {
-		System.out.print(model);
-	}
 }
 
 // Sub/Child Class
 class Truck extends Car {
-	public String model; // Same name as Car attribute. NOT Overriding.
 	public int weight_limit;
 
 	// Same name as Car methods.
 	@Override
 	public void info() {
 		System.out.print("This is a truck.");
-	}
-	@Override
-	public void attributes() {
-		System.out.print(super.model); // Using super to distinguish from sub-class attribute.
-		System.out.print(this.model);
-		System.out.print(this.weight_limit);
 	}
 }
 ```
