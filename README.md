@@ -1,4 +1,4 @@
-# Lab 21
+# Lab - Polymorphism: Override
 
 In this lab you will practice working with **polymorphism**.
 
@@ -103,9 +103,3 @@ Lastly, **override** the `about()` method so when called upon it will output the
 ```
 ./test.sh
 ```
-
-## Submit your assignment
-
-[Grading Criteria](https://joselitoguardado.dev/3326/labs/Lab_21.pdf)
-
-[How to Submit Assignments to GitHub](https://joselitoguardado.dev/3326/How_to_Submit_Assignments_to_GitHub.pdf)
